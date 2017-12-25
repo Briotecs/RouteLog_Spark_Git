@@ -1,0 +1,205 @@
+<div>
+    <div class="row">
+
+    	<div class="bt-col-lg-20 bt-col-md-20">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-truck fa-5x">
+							</i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge ng-binding">{{dashBoardData.VehStatus[0].Value}}</div>
+							<div>{{dashBoardData.VehStatus[0].Name}}</div>
+						</div>
+					</div>
+				</div>
+				<a ui-sref="liveMoving({vehstatus:'MovingVehicle'})">
+					<div class="panel-footer"><span class="pull-left">View Details</span> 
+						<span class="pull-right">
+							<i class="fa fa-arrow-circle-right"></i>
+						</span>	
+						<div class="clearfix">
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="bt-col-lg-20 bt-col-md-20">
+			<div class="panel panel-green">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-truck fa-5x">
+							</i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge ng-binding">{{dashBoardData.VehStatus[1].Value}}</div>
+							<div>{{dashBoardData.VehStatus[1].Name}}</div>
+						</div>
+					</div>
+				</div>
+				<a ui-sref="liveMoving({vehstatus:'MovingVehicle'})">
+					<div class="panel-footer"><span class="pull-left">View Details</span> 
+						<span class="pull-right">
+							<i class="fa fa-arrow-circle-right"></i>
+						</span>	
+						<div class="clearfix">
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="bt-col-lg-20 bt-col-md-20">
+			<div class="panel panel-yellow">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-truck fa-5x">
+							</i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge ng-binding">{{dashBoardData.VehStatus[2].Value}}</div>
+							<div>{{dashBoardData.VehStatus[2].Name}}</div>
+						</div>
+					</div>
+				</div>
+				<a ui-sref="liveIdle({vehstatus:'IdleVehicle'})">
+					<div class="panel-footer"><span class="pull-left">View Details</span> 
+						<span class="pull-right">
+							<i class="fa fa-arrow-circle-right"></i>
+						</span>	
+						<div class="clearfix">
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>	
+
+		<div class="bt-col-lg-20 bt-col-md-20">
+			<div class="panel panel-red">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-truck fa-5x">
+							</i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge ng-binding">{{dashBoardData.VehStatus[3].Value}}</div>
+							<div>{{dashBoardData.VehStatus[3].Name}}</div>
+						</div>
+					</div>
+				</div>
+				<a ui-sref="liveHault({vehstatus:'HaultVehicle'})">
+					<div class="panel-footer"><span class="pull-left">View Details</span> 
+						<span class="pull-right">
+							<i class="fa fa-arrow-circle-right"></i>
+						</span>	
+						<div class="clearfix">
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="bt-col-lg-20 bt-col-md-20">
+     		<div class="panel bt-panel-grey">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-truck fa-5x">
+							</i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge ng-binding">{{dashBoardData.VehStatus[4].Value}}</div>
+							<div>{{dashBoardData.VehStatus[4].Name}}</div>
+						</div>
+					</div>
+				</div>
+				<a ui-sref="liveAll({vehstatus:'AllVehicle'})">
+					<div class="panel-footer"><span class="pull-left">View Details</span> 
+						<span class="pull-right">
+							<i class="fa fa-arrow-circle-right"></i>
+						</span>			
+						<div class="clearfix">
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+    </div>
+
+    <div  class="panel-body">
+	    <ul class="list-group">
+	    	<li class="list-group-item"  ng-repeat = "item in dashBoardData.VehList">
+	    		<div class="row">
+	    			<div class="col-md-2">
+	    				<div>
+	    					<p>
+	    						<img src="{{item.Img}}"  style="margin-right: 5px;height: 24px;"> <label>{{item.VehicleNumber}}</label>
+	    					</p>
+	    					 <p><label>Status : </label></p>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-10">
+	    				<div class="row">
+	    					<div class="col-md-4">
+			    				<p>Driver Name : {{item.DriverName}}</p>
+			    				<p>Driver Phone : {{item.DriverName}}</p>
+			    			</div>
+			    			<div class="col-md-4">
+			    				<p>Driver Name : xxxx</p>
+			    				<p>Driver Phone : xxxx</p>
+			    			</div>
+			    			<div class="col-md-4">
+			    				<div>
+			    					<button type="button" class="btn btn-default btn-xs" ng-click="showLocation(item)"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>  
+									<button type="button" class="btn btn-default btn-xs" ng-click="showHistory()"><i class="fa fa-history" aria-hidden="true"></i></button> 
+									<button type="button" class="btn btn-default btn-xs" ng-click="editVehicle(item)">
+										<i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></button> 
+			    				</div>
+			    			</div>
+	    				</div>
+	    			</div>
+	    			
+	    		</div>
+	    	</li>
+	    </ul>
+
+    	<!-- <div class="panel-body">
+    		<table class="row-border hover" datatable="ng">
+				<thead>
+					<tr>
+						<th style="width: 30px;">#</th>
+						<th style="width: 150px;">Vehicle Number</th>
+						<th>Driver Name</th>
+						<th style="width: 50px;">Status</th>
+						<th style="width: 50px;">Ignition</th>
+						<th style="width: 100px;">Main Power</th>
+						<th style="width: 100px;">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat = "item in dashBoardData.VehList">
+						<td>{{$index + 1}}</td> 
+						<td><div><img src="{{item.Img}}"  style="margin-right: 5px;height: 24px;">{{item.VehicleNumber}}</div></td> 
+						<td>{{item.DriverName}}</td>
+						<td>{{item.Status}}</td>
+						<td>{{item.Status}}</td>
+						<td>{{item.Status}}</td>
+						<td>
+						<button type="button" class="btn btn-default btn-xs" ng-click="showLocation(item)"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>  
+						<button type="button" class="btn btn-default btn-xs" ng-click="showHistory()"><i class="fa fa-history" aria-hidden="true"></i></button> 
+						</td>	
+					</tr>
+				</tbody>
+			</table>		
+    	</div>
+ -->
+
+    </div>
+
+</div>

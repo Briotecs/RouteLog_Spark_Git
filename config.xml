@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets" 
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "bt.routelog.spark" version = "1.0">
+   
+   <name>RouteLog</name>
+   
+   <description>
+      Vehicle Tracking
+   </description>
+   
+   <author href = "http://www.briotecs.com" email = "umasankar@briotecs.com">
+      BrioTec IT Systems
+   </author>
+   
+   <preference name = "permissions" value = "none"/>
+   
+  <!--s <icon src = "res/icon/android/drawable-ldpi/tp_icon.png" 
+      gap:platform = "android" gap:qualifier = "ldpi" /> -->
+		
+   <icon src = "content/app_icons/icon-hdpi/ic_launcher.png" 
+      gap:platform = "android" gap:qualifier = "mdpi" />
+		
+   <icon src = "content/app_icons/icon-mdpi/ic_launcher.png" 
+      gap:platform = "android" gap:qualifier = "hdpi" />
+		
+   <icon src = "content/app_icons/icon-xhdpi/ic_launcher.png" 
+      gap:platform = "android" gap:qualifier = "xhdpi" />
+		
+   <icon src = "content/app_icons/icon-xxhdpi/ic_launcher.png" 
+      gap:platform = "android" gap:qualifier = "xxhdpi" />
+	  
+   <icon src = "content/app_icons/icon-xxxhdpi/ic_launcher.png" 
+      gap:platform = "android" gap:qualifier = "xxxhdpi" />	  
+   
+   <icon src = "res/icon/ios/Icon-72.png" gap:platform = "ios" gap:qualifier = ""/>
+   <icon src = "res/icon/ios/icon-57.png" gap:platform = "ios" width = "57" height = "57" />
+   <icon src = "res/icon/ios/icon-72.png" gap:platform = "ios" width = "72" height = "72" />
+   <icon src = "res/icon/ios/icon-57-2x.png" gap:platform = "ios" width = "114" height = "114" />
+   <icon src = "res/icon/ios/icon-72-2x.png" gap:platform = "ios" width = "144" height = "144" />
+   
+</widget>

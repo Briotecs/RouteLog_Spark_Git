@@ -1,0 +1,227 @@
+<div class="row">          
+        <div style="margin-left: 15px; margin-right: 15px; margin-top: 15px;" >
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtFirstName" class="col-sm-4 col-md-3 control-label">Vehilce No <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-user"></span>
+                                    <input type="text" class="form-control" id="txtFirstName" maxlength="40" ng-model="data.VehicleNumber" placeholder="Enter First Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtLastName" class="col-sm-4 col-md-3 control-label">Vehicle Type <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-user"></span>
+                                    <input type="text" class="form-control" id="txtLastName" maxlength="40" ng-model="data.VehicleType" placeholder="Enter Last Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtemail" class="col-sm-4 col-md-3 control-label">EngNumber<span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-envelope"></span>
+                                    <input type="text" class="form-control" id="txtemail" maxlength="80" ng-model="data.EngNumber" placeholder="Enter Email Address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtPassword" class="col-sm-4 col-md-3 control-label">DriverName <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-key"></span>
+                                    <input type="password" class="form-control" id="txtPassword" maxlength="80" ng-model="data.DriverName" placeholder="Enter Password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtLanline" class="col-sm-4 col-md-3 control-label">DriverMobile<span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-fax"></span>
+                                    <input type="text" class="form-control" id="txtLanline" maxlength="20" ng-model="data.DriverMobile" placeholder="Enter Landline No ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtmobile" class="col-sm-4 col-md-3 control-label">BackupDay<span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-mobile"></span>
+                                    <input type="text" class="form-control" id="txtmobile" maxlength="13" ng-model="data.BackupDay" placeholder="Enter Mobile No">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtmodOfRole" class="col-sm-4 col-md-3 control-label">Mobile<span class="text-danger"></span>
+                            </label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-mobile"></span>
+                                    <input type="text" class="form-control" id="txtmobile" maxlength="13" ng-model="data.Mobile" placeholder="Enter Mobile No">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtmodOfStatus" class="col-sm-4 col-md-3 control-label">Status <span class="text-danger"></span>
+                            </label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <select class="form-control" ng-model="data.Status" ng-options="obj.value as obj.name for obj in Status"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+           <!-- <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtmodOfRole" class="col-sm-4 col-md-3 control-label">Createdby<span class="text-danger"></span>
+                            </label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-tachometer"></span>
+                                        <input type="text" class="form-control" id="txtspeedlimit" maxlength="3" ng-model="data.Createdby" placeholder="Enter Speed Limit">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+                
+
+
+
+               <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix ">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>SMS</th>
+                                        <th>Mail</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat = "item in data.Alerts">
+                                        <td><label for="txtFirstName" class="col-sm-4 col-md-3 control-label">{{item.Name}}<span class="text-danger" ng-model ="item.Name"></span></label> 
+                                            </td>
+                                        <td><input type="checkbox" ng-modal="item.IsSMS" ng-click = "checkSMS($index)" ng-true-value="1" ng-false-value="0" ng-checked = "item.IsSMS == 1" /></td>
+                                         <td><input type="checkbox" ng-modal="item.IsMail" ng-click = "checkMail($index)" ng-true-value="1" ng-false-value="0" ng-checked = "item.IsMail == 1" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>                            
+                        </div>
+                    </div>
+                
+            </div> 
+           <!-- <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtmodOfRole" class="col-sm-4 col-md-3 control-label">Hault<span class="text-danger"></span>
+                            </label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-clock-o"></span>
+                                        <input type="text" class="form-control" id="txtspeedlimit" maxlength="3" ng-model="data.SpeedLmt" placeholder="Enter Hault Time Limit">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtmodOfStatus" class="col-sm-4 col-md-3 control-label">Status <span class="text-danger"></span>
+                            </label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <select class="form-control" ng-model="data.Status" ng-options="obj.value as obj.name for obj in Status"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+                       
+        </div>
+       
+
+            
+        
+        <div class="row">
+        <div class="col-md-12 portfolio-item">
+            <div class="well well-bt cx3"  dw-loading="spinLoading">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Alert Name</th>
+                            <th>Email</th>
+                            <th>SMS</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat = "item in data">
+                            <td>{{item.Name}}</td>
+                            <td>
+                            <input type="checkbox" ng-modal="item.IsEmail" ng-click = "checkEmail($index)" ng-true-value="1" ng-false-value= "0" ng-checked = "item.IsEmail == 1"  />
+                            </td>
+                            <td><input type="checkbox" ng-modal="item.IsSMS" ng-click = "checkSMS($index)" ng-true-value="1" ng-false-value="0" ng-checked = "item.IsSMS == 1" /></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>                            
+                
+            </div>
+        </div>
+    </div>
+        -->
+        <div class="col-xs-11 col-sm-11 col-md-12">
+            <button type="button" class="btn btn-danger btn-md pull-right" style="margin-right: 15px" data-dismiss="modal" ng-click="cancel()"><i class="fa fa-times-circle"></i> Cancel</button> 
+            <button id="btnSave" type="button" class="btn btn-success btn-success-bt btn-md pull-right ng-binding" style="margin-right: 5px;" ng-click="save()"><i class="fa fa-floppy-o"></i>  {{frmData.btnsave}}</button>
+        </div>    
+</div>

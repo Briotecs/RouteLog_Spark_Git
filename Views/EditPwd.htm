@@ -1,0 +1,94 @@
+    <!--<div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 padding-top: 100px;">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Change Password</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                  <label>Current Password: </label> <input class="form-control" placeholder="Current Password" name="username" type="username" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label>New Password: </label> <input class="form-control" placeholder="New Password" name="password" type="password" value="">
+                                </div>
+								<div class="form-group">
+                                    <label>Confirm Password: </label> <input class="form-control" placeholder="Confirm Password" name="password" type="password" value="">
+                                </div>
+                                  
+                                <a href="#/login.html" class="btn btn-lg btn-success btn-block" ng-click="updatePassword()">Save</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+	
+	<div class="panel-heading panel-header-custom EditPwd">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-th"></span>
+                        Change password   
+                    </h3>
+                </div>
+<div class="container bootstrap snippet">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+            <div style="margin-top:150px;" class="panel panel-info">
+                <!-- <div class="panel-heading panel-header-custom">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-th"></span>
+                        Change password   
+                    </h3>
+                </div> -->
+                <div class="panel-body">
+                    <div class="row">
+                        <!--<div class="col-xs-6 col-sm-6 col-md-6 separator social-login-box"> <br>
+                           <img alt="" class="img-thumbnail" src="http://bootdey.com/img/Content/avatar/avatar1.png">                        
+                        </div> -->
+                        <div style="margin-top:20px;" class="col-xs-12 col-sm-12 col-md-12 login-box">
+                         <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                              <input class="form-control" type="password" ng-model="currentPwd" placeholder="Current Password">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                              <input class="form-control" type="password" ng-model="newPwd" placeholder="New Password">
+                            </div>
+                          </div>
+						  <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                              <input class="form-control" type="password" ng-model="confirmPwd" placeholder="Confirm Password">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="input-group">
+                              <div class= "pull-right">
+                            <button id="btnSave" type="button" class="btn icon-btn-save btn-danger pull-right" ng-click="cancelchangePwd()" style="margin-right: 5px" type="cancel"><i class="fa fa-times-circle"></i> Cancel</button>
+
+                              <button id="btnSave" type="button" class="btn icon-btn-save btn-success pull-right" ng-click="checkSamePwd()" style="margin-right: 15px; margin-left: 300px;" type="submit"><i class="fa fa-floppy-o"></i> Submit</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+               <!--  <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5"></div>
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <button class="btn icon-btn-save btn-success" ng-click="checkSamePwd()"type="submit">
+                            <span class="btn-save-label"><i class="glyphicon glyphicon-floppy-disk"></i></span>Save</button>
+                        </div>
+						<div class="col-xs-4 col-sm-4 col-md-4"></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

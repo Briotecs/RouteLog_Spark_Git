@@ -1,0 +1,221 @@
+<div class="row" dw-loading="spinLoading">
+    <!-- <div class="panel panel-info"> -->
+        
+        <div style="margin-left: 15px; margin-right: 15px; margin-top: 5px;" >
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtOrgName" class="col-sm-4 col-md-3 control-label">Name <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-user"></span>
+                                    <input type="text" class="form-control" id="txtOrgName" maxlength="80" ng-model="data.Name" placeholder="Enter First Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtemail" class="col-sm-4 col-md-3 control-label">E-mail <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-envelope"></span>
+                                    <input type="text" class="form-control" id="txtemail" maxlength="80" ng-model="data.Email" placeholder="Enter Email Address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtAddress1" class="col-sm-4 col-md-3 control-label">Address1 <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-map-marker"></span>
+                                    <input type="text" class="form-control" id="txtAddress1" maxlength="80" ng-model="data.Address1" placeholder="Enter Address1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtAddress2" class="col-sm-4 col-md-3 control-label">Address2<span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-map-marker"></span>
+                                    <input type="text" class="form-control" id="txtAddress2" maxlength="80" ng-model="data.Address2" placeholder="Enter Address2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtCity" class="col-sm-4 col-md-3 control-label">City <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-map-marker"></span>
+                                    <input type="text" class="form-control" id="txtCity" maxlength="40" ng-model="data.City" placeholder="Enter City Name ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+                <div class="col-md-6">
+                   <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtPincode" class="col-sm-4 col-md-3 control-label">Pincode <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-map-marker"></span>
+                                    <input type="text" class="form-control" id="txtPincode" maxlength="6" ng-model="data.Pincode" placeholder="Enter Pincode ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtLanline" class="col-sm-4 col-md-3 control-label">Phone <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-fax"></span>
+                                    <input type="text" class="form-control" id="txtLanline" maxlength="20" ng-model="data.Phone1" placeholder="Enter Landline No ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group clearfix">
+                            <label for="txtmobile" class="col-sm-4 col-md-3 control-label">Mobile <span class="text-danger"></span></label>
+                            <div class="col-xs-12 col-sm-10 col-md-9">
+                                <div class="input-group" show-error="addEditShowErrors">
+                                    <span class="input-group-addon fa fa-mobile"></span>
+                                    <input type="text" class="form-control" id="txtmobile" maxlength="13" ng-model="data.Mobile" placeholder="Enter Mobile No">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+
+            
+            <div class="row">
+                <div class="col-md-12" >
+                        <legend><h5><b>Notification Limit</b></h5></legend>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="form-group clearfix">
+                                <label for="txtspeedlimit" class="col-sm-4 col-md-4 control-label">Speed <span class="text-danger"></span></label>
+                                <div class="col-xs-12 col-sm-10 col-md-8">
+                                    <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-tachometer"></span>
+                                        <input type="text" class="form-control" id="txtspeedlimit" maxlength="3" ng-model="data.SpeedLmt" placeholder="Enter Speed Limit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="form-group clearfix">
+                                <label for="txtovrspeedlimit" class="col-sm-4 col-md-5 control-label">Over Speed <span class="text-danger"></span></label>
+                                <div class="col-xs-12 col-sm-10 col-md-7">
+                                    <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-tachometer"></span>
+                                        <input type="text" class="form-control" id="txtovrspeedlimit" maxlength="3" ng-model="data.OverSpeedLmt" placeholder="Enter Over Speed Limit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="form-group clearfix">
+                                <label for="txtidledur" class="col-sm-4 col-md-4 control-label">Idle <span class="text-danger"></span></label>
+                                <div class="col-xs-12 col-sm-10 col-md-8">
+                                    <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-clock-o"></span>
+                                        <input type="text" class="form-control" id="txtidledur" maxlength="3" ng-model="data.IDLDuration" placeholder="Enter Idle Duration">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="form-group clearfix">
+                                <label for="txthaltdur" class="col-sm-4 col-md-4 control-label">Hault <span class="text-danger"></span></label>
+                                <div class="col-xs-12 col-sm-10 col-md-8">
+                                    <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-clock-o"></span>
+                                        <input type="text" class="form-control" id="txthaltdur" maxlength="3" ng-model="data.HaltDuration" placeholder="Enter Halted Duration">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>                 
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" >
+                        <legend><h5><b>Notification Configuration</b></h5></legend>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="form-group clearfix">
+                                <label for="txtsmsnoti" class="col-sm-4 col-md-3 control-label">SMS <span class="text-danger"></span></label>
+                                <div class="col-xs-12 col-sm-10 col-md-9">
+                                    <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-mobile"></span>
+                                        <input type="text" class="form-control" id="txtsmsnoti" maxlength="13" ng-model="data.SMSNotification" placeholder="Enter Number for SMS Notification ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="form-group clearfix">
+                                <label for="txtemailnoti" class="col-sm-4 col-md-3 control-label">E-mail <span class="text-danger"></span></label>
+                                <div class="col-xs-12 col-sm-10 col-md-9">
+                                    <div class="input-group" show-error="addEditShowErrors">
+                                        <span class="input-group-addon fa fa-envelope"></span>
+                                        <input type="text" class="form-control" id="txtemailnoti" maxlength="80" ng-model="data.EmailNotification" placeholder="Enter Email Id for Email Notification">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>                 
+            </div>
+
+            <div class="col-xs-11 col-sm-11 col-md-12">
+                    <button type="button" class="btn btn-danger btn-md pull-right" style="margin-right: 15px" data-dismiss="modal" ng-click="cancel()"><i class="fa fa-times-circle"></i> Cancel</button> 
+                    <button id="btnSave" type="button" class="btn btn-success btn-md pull-right ng-binding" style="margin-right: 5px;" ng-click="update()"><i class="fa fa-floppy-o"></i>  Update</button>
+            </div>        
+        </div>
+</div>

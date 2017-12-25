@@ -1,0 +1,147 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-hide="$state.current.name == 'login'" style="margin-bottom: 0px;">
+        <div class="container-fluid main-bg-color">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#/dashboard">
+            <img class="img-responsive2" style="width:150px; height:70px; margin-top:-20px" src="content/images/web-logo.png"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="nav-header">
+            <ul class="pull-right">
+              <li>
+                <a href="#" class="logout" ng-click="logOut()">
+                  <span class="fa fa-sign-out" aria-hidden="true"></span>
+                  Log out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+</nav>
+
+<div class="container display-table" style="padding-top:50px;">    
+      <div class="row display-table-row">
+        <span us-spinner="{radius:40, width:8, length: 10}"></span>
+        <div class="col-sm-2 display-table-cell" ng-hide="$state.current.name == 'login'"  id="side-menu" />
+          <ul>
+             <li class="link" ui-sref-active="active" ng-click="sideMenu=1">
+                  <a ui-sref="dashboard">
+                    <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                    <span class="hidden-sm hidden-xs">Dashboard</span>
+                  </a>
+                </li>
+
+                <li class="link" ng-class="{active : $state.current.name === 'liveAll' || $state.current.name === 'liveMoving' || $state.current.name === 'liveIdle' || $state.current.name === 'liveHault'}" ng-click="sideMenu=2">
+                  <a href="" ng-class="{collapse : sideMenu==2}">
+                    <span class="fa fa-map-marker"></span>
+                    <span class="hidden-sm hidden-xs">Tracking</span>
+                    <span class="label label-success pull-right hidden-xs hidden-sm"></span>              
+                  </a>
+                  <ul class="collapse collapseable" ng-class="{in : sideMenu==2}">
+                    <li class="link" ng-class="{active : $state.current.name === 'liveAll'}">
+                      <a ui-sref="liveAll({vehstatus:'AllVehicle'})">All Vehicle
+                      <span class="label label-success pull-right hidden-xs hidden-sm"></span>
+                      </a>
+                    </li>
+                    <li class="link" ng-class="{active : $state.current.name === 'liveMoving'}">
+                      <a ui-sref="liveMoving({vehstatus:'MovingVehicle'})">Moving Vehicle
+                      <span class="label label-success pull-right hidden-xs hidden-sm"></span>
+                      </a>
+                    </li>
+
+                     <li class="link" ng-class="{active : $state.current.name === 'liveIdle'}">
+                       <a ui-sref="liveIdle({vehstatus:'IdleVehicle'})">Idle Vehicle
+                      <span class="label label-success pull-right hidden-xs hidden-sm"></span>
+                      </a>
+                    </li>
+
+                     <li class="link" ng-class="{active : $state.current.name === 'liveHault'}">
+                      <a ui-sref="liveHault({vehstatus:'HaultVehicle'})">Hault Vehicle
+                      <span class="label label-success pull-right hidden-xs hidden-sm"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="link" ui-sref-active="active" ng-click="sideMenu=3">
+                  <a ui-sref="history" >
+                    <span class="fa fa-history" aria-hidden="true"></span>
+                    <span class="hidden-sm hidden-xs">Vehicle History</span>
+                  </a>
+                </li>
+
+                <li class="link" ng-class="{active : $state.current.name === 'speedReport' || $state.current.name === 'idlevchrpt' || $state.current.name === 'HaultedVehrpt' || $state.current.name === 'MovingVehReport'}" ng-click="sideMenu=4">
+                   <a href="" ng-class="{collapse : sideMenu==4}">
+                    <span class="fa fa-bar-chart" aria-hidden="true"></span>
+                    <span class="hidden-sm hidden-xs">Reports</span>
+                  </a>
+                  <ul class="collapse collapseable" ng-class="{in : sideMenu==4}">
+                      <li class="link" ng-class="{active : $state.current.name === 'speedReport'}">
+                        <a ui-sref="speedReport">Over speed Report                    
+                        </a>
+                      </li>
+
+                      <li class="link" ng-class="{active : $state.current.name === 'idlevchrpt'}">
+                        <a ui-sref="idlevchrpt">Idle Report                    
+                        </a>
+                      </li>
+
+                       <li class="link" ng-class="{active : $state.current.name === 'HaultedVehrpt'}">
+                        <a ui-sref="HaultedVehrpt">Haulted Report                    
+                        </a>
+                      </li>
+
+                      <li class="link" ng-class="{active : $state.current.name === 'MovingVehReport'}">
+                        <a ui-sref="MovingVehReport">Moving Report                    
+                        </a>
+                      </li>
+
+                  </ul>
+                </li>
+
+                <li class="link" ui-sref-active="active" ng-click="sideMenu=5">
+                  <a ui-sref="GeoZone" >
+                    <span class="fa fa-bullseye" aria-hidden="true"></span>
+                    <span class="hidden-sm hidden-xs">Geo Zone</span>
+                  </a>
+                </li>
+
+                <li class="link" ng-class="{active : $state.current.name === 'orgProfile' || $state.current.name === 'userProfile' || $state.current.name === 'changePassword' || $state.current.name === 'licence'}" ng-click="sideMenu=6">
+                   <a href="" ng-class="{collapse : sideMenu==6}">
+                    <span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    <span class="hidden-sm hidden-xs">Settings</span>
+                  </a>
+                  <ul class="collapse collapseable" ng-class="{in : sideMenu==6}">
+                      <li class="link" ng-class="{active : $state.current.name === 'orgProfile'}">
+                        <a ui-sref="orgProfile">Organisation Profile Settings                    
+                        </a>
+                      </li>
+
+                      <li ng-class="{active : $state.current.name === 'userProfile'}">
+                        <a ui-sref="userProfile">User Profile Settings                    
+                        </a>
+                      </li>
+
+                       <li ng-class="{active : $state.current.name === 'changePassword'}">
+                        <a ui-sref="changePassword">Change Password
+                        </a>
+                      </li>
+                      <li ng-class="{active : $state.current.name === 'licence'}">
+                        <a ui-sref="licence">Licence Info
+                        </a>
+                      </li>                          
+                  </ul>
+                </li>
+          </ul>
+        </div>
+        <div class="col-sm-10 display-table-cell text-left"> 
+          <div class="bt-label bt-title" ng-hide="$state.current.name == 'login'">{{ Page.title() }}</div>
+          <section>
+            <div ui-view></div>
+          </section>
+        </div>
+      </div>
+    </div>

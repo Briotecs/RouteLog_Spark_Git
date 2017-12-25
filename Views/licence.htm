@@ -1,0 +1,37 @@
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('#example').DataTable( {
+        
+    } );
+} );
+</script>
+<div style="margin: 20px;">
+
+		<div dw-loading="spinLoading" ng-hide ="data.length==0">
+			<br>
+			<table id="example" class="display compact table-striped table-bordered" cellspacing="0" width="100%" datatable="ng">
+			<thead> 
+					<tr> 
+					<th>#</th>
+						<th style="width: 160px;">Vehicle Number</th> 
+						<th style="width: 160px;">Device Model</th> 
+						<th>Plan</th>
+						<th style="width: 35px;">IMEI No</th>
+						<th style="width: 35px;">Valid Upto</th>
+						<th style="width: 35px;">Days left</th>
+					</tr> 
+				</thead> 
+				<tbody> 
+					<tr ng-repeat = "item in data" >
+					<td>{{$index + 1}}</td> 
+						<td>{{item.VehicleNumber}}</td> 
+						<td>{{item.Device}}</td> 
+						<td>{{item.Plan}}</td>
+						<td>{{item.IMEI}}</td>
+						<td>{{item.ValidUpto}}</td>
+						<td>{{item.NoOfDay}}</td>
+					</tr> 
+				</tbody> 
+			</table>
+		</div>
+</div>				

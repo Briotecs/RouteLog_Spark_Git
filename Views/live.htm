@@ -1,0 +1,86 @@
+<div>
+     <div class="row" style=" margin-top: 3px; margin-bottom: 3px;">
+      
+        <div class="col-md-3">
+            <div class="row">
+                <div class="input-group" style="margin-left: 10px;margin-bottom: 5px;">
+                    <span class="input-group-addon input-group-bt-addon" >Vechile No  </span>
+                    <input type="text" class="form-control form-control-bt" ng-change="onedit()"  ng-model="vehNumber" uib-typeahead="item for item in ListOfVehicle | filter:$viewValue | limitTo:8" placeholder="Choose Vehicle">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row">
+                <div class="pull-right" style="margin-right: 10px;">
+                <button ng-click="submit()" class="btn btn-primary" >Submit</button>
+                <button id="drop" class="btn btn-primary" ng-show="isMap" ng-click="showMap()">Show Grid</button>
+                <button id="drop" class="btn btn-primary" ng-hide="isMap" ng-click="showMap()">Show Map</button>
+            </div>
+            </div>
+        </div>
+    </div>
+  
+  <div class="row">
+    <div class="floating-panel" ng-show="isMap" >          
+        <button type="button" class="btn btn-danger btn-md pull-right" style=" padding: 0px 0px !important; font-size: 0px; margin-right: 15px" data-dismiss="modal" ng-click="refreshMap()">
+            <i class="material-icons"   style="font-size: 40px; cursor:pointer; margin-left: 0px;" >refresh</i>
+        </button>            
+        </div>
+      <ng-map id="map" center="{{mapCenter}}" ng-show="isMap" class="map-panel" zoom="6">
+        <!--  <div ng-repeat="p in gridOptions.data"> -->
+              <!-- id="marker-{{$index}}" -->
+              <info-window id="bar">
+                    <div ng-non-bindable>
+                      <table border="0" class="infDisp" style="color:#000000">
+                            <tbody><tr >
+                            <td>Vehicle No :</td>
+                            <td>{{vchInfoWindow.VehicleNumber}}</td>
+                            </tr>
+                            <tr>
+                            <td>Vehicle Status :</td>
+                            <td>{{vchInfoWindow.Status}}</td>
+                            </tr>
+                            <tr>
+                              <td>Ignition Status :</td>
+                              <td>{{vchInfoWindow.Ignition}}</td>
+                            </tr>
+                             <tr>
+                              <td>Driver Name :</td>
+                              <td>{{vchInfoWindow.DriverName}}</td>
+                            </tr>
+                            <tr>
+                              <td>Last Connected Date :</td>
+                              <td class="ng-binding">{{vchInfoWindow.Dt}}
+                              <input type="hidden" id="latlongid">
+                              </td>
+                            </tr>
+                            </tbody>
+                      </table>
+                          <table cellpadding="0" cellspacing="0" border="0" style="color:#000000">
+                              <tbody><tr>
+                              <td colspan="2" class="nwaddr"><span style="color:#ff8a00">Address:</span></td>
+                              </tr>
+                              <tr>
+                              <td colspan="2">
+                              <span class="geoAddressText ng-pristine ng-untouched ng-valid ng-empty">{{vchInfoWindow.address}}</span>
+                              </td>
+                              </tr>
+                              </tbody>
+                          </table>
+                    </div>
+              </info-window>
+
+              <marker  ng-repeat="p in gridOptions.data" icon="{{showIcon(p)}}"  position="{{p.Lat}}, {{p.Lon}}" on-click="showVchInfo(event, p)" >
+                  
+              </marker>
+         <!-- </div> -->
+     </ng-map>
+  </div>
+
+    <div class="row" ng-hide="isMap" >
+          <br>
+          <div class="gridmsg" ng-show ="gridOptions.data.length==0">No Data Available for the Particular Selection</div>      
+        <div ng-hide ="gridOptions.data.length==0" ui-grid="gridOptions" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination ui-grid-exporter ui-grid-move-columns ui-grid-pinning class="grid"></div>
+   </div>
+</div>

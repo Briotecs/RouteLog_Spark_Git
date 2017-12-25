@@ -1,0 +1,110 @@
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('#example').DataTable( {
+        
+    } );
+} );
+</script>
+<div>
+<style>
+</style>
+    <div class="row" style=" margin-top: 3px; margin-bottom: 3px;">
+          
+        <div class="col-md-3 col-lg-3" style="margin-left: 10px; margin-bottom: 5px;">
+            <div class="row">
+                <div class="input-group">
+                    <span class="input-group-addon input-group-bt-addon" >Date </span>
+                    <input  type="text"  id="todate" class="form-control form-control-bt" uib-datepicker-popup="{{format}}" ng-model="historydt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="open2()" />
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            </div>            
+        </div> 
+        <div class="col-md-3" style="margin-left: 10px;">
+            <div class="row">
+                <div class="input-group" style="margin-left: 10px;">
+                    <span class="input-group-addon input-group-bt-addon" >Vehicle No  </span>
+                    <input type="text" class="form-control form-control-bt" ng-change="onedit()"  ng-model="vehNumber" uib-typeahead="item for item in ListOfVehicle | filter:$viewValue | limitTo:8" placeholder="Choose Vechile">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="row">
+                <div ng-show="isPlay" style=" margin-left: 10px; margin-right: 10px;">
+                <button class="btn btn-primary"  ng-click="showHistory()">History</button>
+                <button id="drop" class="btn btn-primary" ng-show="isMap" ng-click="showMap()">Show Grid</button>
+                <button id="drop" class="btn btn-primary" ng-hide="isMap" ng-click="showMap()">Show Map</button>
+            </div>
+            </div>
+			<span us-spinner spinner-theme="bigBlue" spinner-key="spinner-2"></span>
+        </div>
+    </div>
+	<div class="row">
+		<div class="floating-panel" ng-show="isMap"> 
+        <div ng-hide ="data.length==0">
+                    <button type="button" class="btn btn-danger" style="font-size: 12px !important;" ng-show="isPlay" ng-click="playGPSTracking()"><i class="fa fa-play"></i> Play </button>
+                     <button type="button" class="btn btn-danger" style="font-size: 12px !important;" ng-hide="isPlay" ng-click="pauseGPSTracking()"><i class="fa fa-pause"></i> Pause </button>
+         
+        <div google-chart chart="myChartObject" style="height:130px; width:100%;"></div>
+        <rzslider ng-show="isPlay" class="rzslider-custom" rz-slider-model="slider.value"
+          rz-slider-options="slider.options"></rzslider>
+		</div>                    
+
+       </div>
+	   <!-- <ng-map id="map" center="{{map.centerLat}},{{map.centerLon}}" ng-show="isMap" style="height: 480px;" zoom="{{myZoomLevel}}">
+	       <marker ng-repeat="pos in markers" icon="{{showIconByStatus(pos,$index)}}"  position="{{pos.Lat}}, {{pos.Lon}}" title="{{loadTitle(pos)}}"  ></marker>
+	       <!-- <shape name="polyline" path="{{path}}" geodesic="true" stroke-color="#2a4599" stroke-opacity="2.0" stroke-weight="3">
+	        </shape>
+        </ng-map> -->
+	    
+		<ng-map id="map" center="{{map.centerLat}},{{map.centerLon}}" ng-show="isMap" class="map-panel" zoom="{{myZoomLevel}}">
+	      <!--  <marker ng-repeat="pos in markers" icon="{{showIconByStatus(pos,$index)}}"  position="{{pos.Lat}}, {{pos.Lon}}" title="{{loadTitle(pos)}}"  ></marker>
+	       <shape name="polyline" path="{{path}}" geodesic="true" stroke-color="#2a4599" stroke-opacity="2.0" stroke-weight="3">
+	        </shape>-->
+        </ng-map>
+		
+	</div>
+
+    <div class="row removemargin" ng-hide="isMap" >
+        <br>
+        <div class="gridmsg" ng-show ="gridoptions.data.length==0">No Data Available for the Selected Date</div>     
+        <br>
+            <table class="table display compact table-striped table-bordered" datatable="ng" ng-hide="dataGird.length==0" >
+                <thead> 
+                    <tr> 
+                    <th style="width: 30px;">#</th>
+                        <th style="width: 150px;">Start Time</th> 
+                        <th style="width: 150px;">End Time</th> 
+                        <th style="width: 150px;">Start Location</th>
+                        <th style="width: 150px;">End Location</th>
+                        <th style="width: 35px;">Distance</th>
+                        <th style="width: 35px;">Duration</th>
+                        <th style="width: 35px;">Status</th>                        
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <tr ng-repeat = "item in dataGird" >
+                    <td>{{$index + 1}}</td> 
+                        <td>{{item.Dt}}</td> 
+                        <td>{{item.EndDt}}</td> 
+                        <td>{{item.Address}}</td>
+                        <td>{{item.ToAddress}}</td>
+                        <td>{{item.Distance}}</td>
+                        <td>{{item.Duration}}</td>                              
+                        <td>{{item.Status}}</td>  
+                    </tr> 
+                </tbody> 
+            </table>
+   </div>
+</div>
+
+
+
+
+
+
+	
+    
+ 

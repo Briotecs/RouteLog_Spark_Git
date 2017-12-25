@@ -1,0 +1,40 @@
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('#example').DataTable( {
+        
+    } );
+} );
+</script>
+<div style="margin: 20px;">
+	<div dw-loading="spinLoading" ng-hide ="data.length==0">
+		<br>
+		<table id="example" class="display compact table-striped table-bordered" cellspacing="0" width="100%" datatable="ng">
+		<thead> 
+				<tr> 
+				<th>#</th>
+					<th style="width: 160px;">First Name</th> 
+					<th style="width: 160px;">Last Name</th> 
+					<th>Email Id</th>
+					<th style="width: 35px;">Mobile No</th>
+					<th style="width: 35px;">Phone No</th>
+					<th style="width: 35px;">Role</th>
+					<th style="width: 35px;">Status</th>
+					<th style="width: 30px;">Edit</th>
+				</tr> 
+			</thead> 
+			<tbody> 
+				<tr ng-repeat = "item in data" >
+				<td>{{$index + 1}}</td> 
+					<td>{{item.Name}}</td> 
+					<td>{{item.LName}}</td> 
+					<td>{{item.EmailID}}</td>
+					<td>{{item.Mobile}}</td>
+					<td>{{item.Phone}}</td>
+					<td>{{item.RoleText}}</td>								
+					<td>{{item.StatusText}}</td>	
+					<td><button type="button" class="btn btn-default btn" ng-click="editUser(item)"><i class="glyphicon glyphicon-pencil"></i></button>  </td>	
+				</tr> 
+			</tbody> 
+		</table>
+	</div>
+</div>				

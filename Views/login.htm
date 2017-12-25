@@ -1,0 +1,32 @@
+	<div class="page-contact">
+		<div class="row">
+            <div class="col-md-4 col-md-offset-4 padding-top: 100px;">
+                <div class="login-panel panel panel-default" style="width:350px; margin-left:-35px; margin-top: 20px;">
+                    <div class="panel-heading" style="color: #000; background-color: #ededed;">
+                        <h3 class="panel-title">Login</h3>
+                    </div>
+                    <div class="panel-body">
+                       <div>
+                           <img src="Content/images/web-logo.png" ></img>
+                            <form ng-submit="login()">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <input class="form-control form-control-bt" placeholder="Username or Email Id" name="username" type="username" maxlength="80" ng-model="username" autofocus>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control form-control-bt" placeholder="Password" name="password" type="password" ng-model="password" maxlength="80" value="" ng-keyup="$event.keyCode == 13 && login()">
+                                    </div>
+                                </fieldset>
+                            </form>
+                       </div>
+                        <span us-spinner spinner-theme="bigBlue" spinner-key="spinner-1"></span>
+                        <!--<div dw-loading="spinLoading">-->
+						<div>
+                            <button id="btnSave" type="button" class="btn btn-lg btn-success btn-success-bt btn-block" ng-disabled="isDisabled" ng-click="login()"></i> Login</button>
+                            <label style="margin-left:38px;margin-top:5px;">   Version 0.1.0 Beta</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

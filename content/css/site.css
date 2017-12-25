@@ -1,0 +1,224 @@
+
+/*:lang(ta)     {
+    font-family: Latha, "Tamil MN", serif;
+    }*/
+
+/*.TamilFont 
+{ 
+font-family : VANAVIL-Barani; 
+}
+
+.tamilclass
+{ 
+
+font-family: Bamini;  
+} */
+
+
+
+
+
+.page-header {
+    color: rgb(157, 140, 24);
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 0 8px 0 8px;
+    border-top: 1px solid #dfdfdf;
+    margin-top: 5px;
+}
+
+.bot-mar-remove {
+    margin-bottom: 0px !important;
+}
+
+.add-ico {
+    background-image: url('/content/Images/add.png');
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    background-position: 3px center;
+}
+
+
+
+alert-header {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.alert-footer {
+    text-align: right;
+    padding-top: 5px;
+    border-top: 1px solid #E5E5E5;
+    clear: both;
+}
+
+    .alert-footer .btn + .btn {
+        margin-bottom: 0px;
+        margin-left: 5px;
+    }
+
+.modal-dialog {
+    width: 600px;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+.placeholder option:first-child {
+    display: none;
+}
+
+
+.cancel-ico {
+    background-image: url('/content/Images/cancel.png');
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    margin-left: -10px;
+    background-position: 3px center;
+}
+
+.jumbotron.provider-info {
+    margin: 1px;
+    /*  padding: 30px;
+    background-color: #6F5499;*/
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 0px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+.page-title {
+    color: rgb(157, 140, 24);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        padding: 0 8px 0 8px;
+        border-top: 1px solid #dfdfdf;
+        /*margin-top:5px;*/
+        z-index: 1000;
+    }
+
+    .mar-top {
+        min-height: 100%;margin-top: 45px;
+    }
+
+    .bot-mar-remove {
+        margin-bottom: 0px !important;
+    }
+
+    .add-ico {
+        background-image: url('/content/Images/add.png');
+        background-repeat: no-repeat;
+        padding-left: 25px;
+        background-position: 3px center;
+    }
+
+    .page-title {
+        color: rgb(157, 140, 24);
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        padding: 8px;
+        border-top: 1px solid #dfdfdf;
+        /*margin-top:5px;*/
+        z-index: 1000;
+    }
+
+     .mar-top {
+        min-height: 100%;margin-top: 45px;
+    }
+}
+
+@media(max-width: 767px){
+    .mar-top{
+        min-height: 100%;margin-top: 110px;
+    }
+}
+/* Landscape phone to portrait tablet 
+@media (max-width: 767px) { 
+
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+        width: 100%;
+        padding: 8px;
+        border-top: 1px solid #dfdfdf;
+        /*margin-top:5px;*/
+        z-index: 1000;
+    }
+    
+    alert-header {
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    .alert-footer {
+        text-align: right;
+        padding-top: 5px;
+        border-top: 1px solid #E5E5E5;
+        clear: both;
+    }
+
+        .alert-footer .btn + .btn {
+            margin-bottom: 0px;
+            margin-left: 5px;
+        }
+
+    .modal-dialog {
+        width: 600px;
+        max-width: 90%;
+        margin: 50px auto;
+    }
+
+    .placeholder option:first-child {
+        display: none;
+    }
+
+
+    .cancel-ico {
+        background-image: url('/content/Images/cancel.png');
+        background-repeat: no-repeat;
+        padding-left: 25px;
+        margin-left: -10px;
+        background-position: 3px center;
+    }
+}
+
+#img_logo {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.img-circle {
+    /*height:100px;*/
+    border-radius: 50%;
+}

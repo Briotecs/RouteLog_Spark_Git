@@ -1,0 +1,43 @@
+<div>
+	<div class="panel-body">
+            
+				<!-- <label class="bt-label">Alert Settings:</label> -->
+            
+        </div>
+	<div class="row">
+		<div class="col-md-12 portfolio-item">
+			<div class="well well-bt cx3"  dw-loading="spinLoading">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Alert Name</th>
+							<th>Email</th>
+							<th>SMS</th>
+							<th>Push Notification</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat = "item in data">
+							<td>{{item.Name}}</td>
+							<td>
+							<input type="checkbox" ng-modal="item.IsEmail" ng-click = "checkEmail($index)" ng-true-value="1" ng-false-value= "0" ng-checked = "item.IsEmail == 1"  />
+							</td>
+							<td><input type="checkbox" ng-modal="item.IsSMS" ng-click = "checkSMS($index)" ng-true-value="1" ng-false-value="0" ng-checked = "item.IsSMS == 1" /></td>
+							<td><input type="checkbox" ng-modal="item.IsPushNotification" ng-click = "checkPushNotification($index)" ng-true-value="1" ng-false-value="0" ng-checked = "item.IsPushNotification == 1" /></td>
+						</tr>
+					</tbody>
+				</table>							
+				<div class="panel-footer">
+	                <div class="form-group row">
+	                    <div class="col-xs-11 col-sm-11 col-md-12">
+	                        <button type="button" class="btn btn-danger btn-md pull-right" style="margin-right: 15px" data-dismiss="modal" ng-click="cancel()"><i class="fa fa-times-circle"></i> Cancel
+	                        </button> 
+	                        <button id="btnSave" type="button" class="btn btn-success btn-success-bt btn-md pull-right ng-binding" style="margin-right: 5px;" ng-click="save()"><i class="fa fa-floppy-o"></i> Save
+	                        </button>
+	                    </div>
+	                </div>
+	            </div>
+			</div>
+		</div>
+	</div>
+</div>
